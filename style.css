@@ -1,0 +1,18 @@
+.memory-board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+  }
+  
+  .memory-card {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
