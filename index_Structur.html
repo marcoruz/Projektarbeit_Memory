@@ -3,17 +3,43 @@
 
 <head>
   <title>Memory-Spiel</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+  <meta name="robots" content="index, follow, noarchive, noodp, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="description" content="memory-game" />
+  <link rel="stylesheet" type="text/css" media="all" href="./css/style.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="./css/memory_Spiel.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="./css/modal.css" />
 </head>
-
 <body>
-  <h1>Memory-Spiel</h1>
-
-  <div class="memory-board">
-    <!-- Karten werden hier dynamisch generiert -->
+  <div class="page page-memory-game">
+      <div class="memory-game" id="memoryGame">
+          <div class="memory-board"></div>
+          <div class="memory-slider no-match slideUp" id="noMatch">Kein Treffer</div>
+          <div class="memory-slider match slideUp" id="match">Treffer!</div>
+          <div class="memory-ui">
+              <span class="memory-moves">Moves: <span id="memoryMoves">0</span></span>
+              <span class="memory-matches">Matches: <span id="memoryMatches">0</span> <span class="memory-matches-cards" id="memoryMatchesCards"></span></span>
+          </div>
+          <div class="modal modal-fadeIn" id="modal-finish">
+              <div class="modal-stage">
+                  <div class="modal-body">
+                      <h1>Alle Übereinstimmungen gefunden!</h1>
+                      <p><strong>Gut gemacht!</strong> Du hast alle Übereinstimmungen gefunden.</p>
+                      <button class="playBtn">Play Again</button>
+                  </div>
+              </div>
+          </div>
+          <p>Documentation about this memory game <a href="http://127.0.0.1:5500/index_Structur.html">here</a></p>
+      </div>
+      <script src="js/memory_script.js"></script>
+      <script type="module">
+          import MemoryCards from './js/memory_cards.js';
+          let memoryGame = new MemoryGame({
+              selector: document.getElementById('memoryGame'),
+              cards: MemoryCards.getCards()
+          });
+      </script>
   </div>
-
-  <script src="memory_script.js"></script>
 </body>
-
 </html>
