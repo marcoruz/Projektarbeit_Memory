@@ -1,20 +1,20 @@
 //_______________________________________________________________________________________
 // Hier werden die Karten abgelegt
-
-export default {
+import { myVariable } from './picture_selection.js';
+export default   {
 
   // Standartordnerpfad der Bilder
-  dir: '/img/fruits_picture/',
+  dir: myVariable,
 
   // Anzahl der Bilder
   amount: 16,
 
   // Funktion zum Aktualisieren des Ordnerpfads
-  updateDir(newDir) {
-      this.dir = newDir;
-    },
-    
-    newDir: '/img/Hardware_picture/',
+  //updateDir(newDir) {
+      //this.dir = newDir;
+    //},
+  
+  
 
   getCards() {
       let cards = [];
@@ -27,3 +27,4 @@ export default {
       return cards;
   }
 }
+ 

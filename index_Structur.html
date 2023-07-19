@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>Memory-Spiel</title>
   <meta charset="utf-8" />
@@ -20,7 +19,7 @@
           <div class="memory-ui">
               <span class="memory-moves">Moves: <span id="memoryMoves">0</span></span>
               <span class="memory-matches">Matches: <span id="memoryMatches">0</span> <span class="memory-matches-cards" id="memoryMatchesCards"></span></span>
-              <button onclick="MemoryCards.updateDir('/img/Hardware_picture/');">Click Hardware-picture</button>
+              <button onclick="selectImages()">Bilderauswahl</button>
           </div>
           <div class="modal modal-fadeIn" id="modal-finish">
               <div class="modal-stage">
@@ -33,14 +32,57 @@
           </div>
           <p>Documentation about this memory game <a href="http://127.0.0.1:5500/index_Structur.html">here</a></p>
       </div>
-      <script src="js/memory_script.js"></script>
-      <script type="module">
-          import MemoryCards from './js/memory_cards.js';
-          let memoryGame = new MemoryGame({
-              selector: document.getElementById('memoryGame'),
-              cards: MemoryCards.getCards()
-          });
-      </script>
+
   </div>
+  <div class="hide" id="hide">
+    <div class="popup">
+      <h2>Bilderauswahl</h2>
+      <button onclick="hide(),fruits()">Fruits Picture</button>
+      <button onclick="hide(),Hardware()">Hardware Picture</button>
+    </div>
+   
+ 
+
+  </div>
+   <!-- <script>
+    function selectImages() {
+      // Weiterleiten zur picture_selection.html Seite
+      window.location.href = 'picture_selection.html';
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const selectedImageType = localStorage.getItem('selectedImageType');
+
+      if (selectedImageType) {
+        let memoryGame = new MemoryGame({
+          selector: document.getElementById('memoryGame'),
+          cards: MemoryCards.getCards(selectedImageType)
+        });
+      }
+    });
+  </script>-->
+
+  <script type="module">
+      import MemoryCards from './js/memory_cards.js';
+      let memoryGame = new MemoryGame({
+          selector: document.getElementById('memoryGame'),
+          cards: MemoryCards.getCards()
+      });
+  </script>
+ <!-- <script>
+       function selectImages(selectedImageType) {
+      // Speichern Sie den ausgewählten Wert in Local Storage oder einer anderen Speichermethode
+      localStorage.setItem('selectedImageType', selectedImageType);
+
+      // Weiterleiten zur index_Structur.html Seite
+      //window.location.href = 'index_Structur.html';
+    }
+  </script> -->
+  <script src="./js/memory_script.js"></script>
+  <script src="./js/memory_cards.js"></script>
+  <script src="./js/picture_selection.js"></script>
+  <script>function hide(){
+    document.getElementById("hide").style.display="none";
+    }</script>
 </body>
 </html>

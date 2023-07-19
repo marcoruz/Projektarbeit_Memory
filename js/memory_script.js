@@ -33,6 +33,10 @@ class MemoryGame {
       this.render();
       this.updateUI();
 
+     // Bildpfad aktualisieren basierend auf der Bilderauswahl
+    //MemoryCards.updateDir(selectedImageType);
+   
+
       this.cardCollectionBox = document.getElementById('memoryMatchesCards').getBoundingClientRect();
 
       const cardElements = this.node.querySelectorAll('.memory-card-item');
