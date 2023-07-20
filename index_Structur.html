@@ -9,7 +9,7 @@
   <link rel="stylesheet" type="text/css" media="all" href="./css/style.css" />
   <link rel="stylesheet" type="text/css" media="all" href="./css/memory_Spiel.css" />
   <link rel="stylesheet" type="text/css" media="all" href="./css/modal.css" />
-</head>
+ </head>
 <body>
   <div class="page page-memory-game">
       <div class="memory-game" id="memoryGame">
@@ -19,7 +19,6 @@
           <div class="memory-ui">
               <span class="memory-moves">Moves: <span id="memoryMoves">0</span></span>
               <span class="memory-matches">Matches: <span id="memoryMatches">0</span> <span class="memory-matches-cards" id="memoryMatchesCards"></span></span>
-              <button onclick="selectImages()">Bilderauswahl</button>
           </div>
           <div class="modal modal-fadeIn" id="modal-finish">
               <div class="modal-stage">
@@ -34,16 +33,13 @@
       </div>
 
   </div>
+ <!-- <div class="page page-memory-game">-->
   <div class="hide" id="hide">
     <div class="popup">
       <h2>Bilderauswahl</h2>
       <button onclick="hide(),fruits()">Fruits Picture</button>
       <button onclick="hide(),Hardware()">Hardware Picture</button>
     </div>
-   
- 
-
-  </div>
    <!-- <script>
     function selectImages() {
       // Weiterleiten zur picture_selection.html Seite
@@ -61,6 +57,10 @@
       }
     });
   </script>-->
+ <!-- Einbinden des JavaScript-Moduls für die Bildauswahl -->
+ <script src="./js/picture_selection.js"></script>
+
+
 
   <script type="module">
       import MemoryCards from './js/memory_cards.js';
@@ -78,9 +78,9 @@
       //window.location.href = 'index_Structur.html';
     }
   </script> -->
+  <!--<script src="./js/picture_selection.js"></script>-->
   <script src="./js/memory_script.js"></script>
   <script src="./js/memory_cards.js"></script>
-  <script src="./js/picture_selection.js"></script>
   <script>function hide(){
     document.getElementById("hide").style.display="none";
     }</script>
