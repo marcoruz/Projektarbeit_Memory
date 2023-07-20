@@ -13,7 +13,7 @@
     padding: 0;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10.0%, 1fr));
     grid-gap: 4% 2%;
 }
 
@@ -114,10 +114,10 @@ des Elements mit der Klasse ".memory-item" befindet.
 .memory-card-item:hover .memory-card-item-front {
     background: repeating-linear-gradient(
             -45deg,
-            #333,
-            #333 10px,
-            #444 10px,
-            #444 20px
+            darkblue,
+            darkblue 5px,
+            lightblue 10px,
+            darkblue 20px
     );
 }
 .memory-card-item-back {
@@ -139,7 +139,7 @@ des Elements mit der Klasse ".memory-item" befindet.
     justify-content: space-between;
     align-items: center;
     font-size: 40px;
-    background-color: rgba(255,255,255,0.65);
+    background-color: rgba(255, 255, 255, 0.574);
 }
 .memory-ui .memory-moves {
     display: flex;

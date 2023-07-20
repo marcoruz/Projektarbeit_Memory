@@ -2,12 +2,12 @@
 
 export default {
   // Anzahl der Bilder
-  amount: 16,
+  amount: 20,
 
   getCards() {
     // Abrufen des ausgewählten Ordnerpfads aus dem Local Storage
     const selectedImageType = localStorage.getItem('selectedImageType');
-    let dir = selectedImageType || '/img/fruits_picture/';
+    let dir = selectedImageType;
 
     let cards = [];
     for (let i = 1; i <= this.amount; i++) {

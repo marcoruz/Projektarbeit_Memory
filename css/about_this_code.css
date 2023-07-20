@@ -1,0 +1,10 @@
+/* In der style.css oder einer anderen CSS-Datei */
+/* In der about_this_code.css oder einer anderen CSS-Datei */
+
+  
+  body { background-image: url(../img/pattern.jpg);
+text-align: center;
+}
+p{text-align: center;
+margin: 60px;
+}

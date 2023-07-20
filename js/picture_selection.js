@@ -14,6 +14,6 @@ function Hardware() {
   // Speichern des ausgewählten Ordnerpfads im Local Storage
   localStorage.setItem('selectedImageType', dir);
   // Neu laden der Seite, um die memory_cards.js mit dem aktualisierten Pfad zu verwenden
-  //location.reload();
+  location.reload();
 }
 //_________________________________________________________________
